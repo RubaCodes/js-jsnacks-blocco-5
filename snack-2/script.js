@@ -4,61 +4,72 @@
 const zucchine = [
   {
     tipo: 'a',
-    lunghezza: 5,
+    lunghezza: 10,
     peso: 100,
   },
   {
     tipo: 'b',
-    lunghezza: 6,
+    lunghezza: 11,
     peso: 110,
   },
   {
     tipo: 'c',
-    lunghezza: 7,
+    lunghezza: 12,
     peso: 120,
   },
   {
     tipo: 'd',
-    lunghezza: 8,
+    lunghezza: 13,
     peso: 130,
   },
   {
     tipo: 'e',
-    lunghezza: 9,
+    lunghezza: 14,
     peso: 140,
   },
   {
     tipo: 'f',
-    lunghezza: 10,
+    lunghezza: 15,
     peso: 150,
   },
   {
     tipo: 'g',
-    lunghezza: 11,
+    lunghezza: 16,
     peso: 160,
   },
   {
     tipo: 'h',
-    lunghezza: 12,
+    lunghezza: 17,
     peso: 170,
   },
   {
     tipo: 'i',
-    lunghezza: 13,
+    lunghezza: 18,
     peso: 180,
   },
   {
     tipo: 'i',
-    lunghezza: 14,
+    lunghezza: 19,
     peso: 190,
   },
 ];
 
-let totalWeight = 0;
+const longer = [];
+const shorter = [];
 for (let i = 0; i < zucchine.length; i++) {
-  totalWeight += zucchine[i].peso;
+  zucchine[i].lunghezza >= 15
+    ? longer.push(zucchine[i])
+    : shorter.push(zucchine[i]);
+}
+let sumShorter = 0;
+let sumLonger = 0;
+for (let i = 0; i < shorter.length; i++) {
+  sumShorter += shorter[i].peso;
+}
+for (let i = 0; i < longer.length; i++) {
+  sumLonger += longer[i].peso;
 }
 
 console.log(
-  `il peso totale  e'${totalWeight} g , ovvero ${totalWeight / 1000} kg`
+  `Il peso delle piu corte vale ${sumShorter}g , mentre quello delle piu lunghe vale ${sumLonger}gr`
 );
