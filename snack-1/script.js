@@ -52,3 +52,10 @@ const zucchine = [
     peso: 190,
   },
 ];
+
+let totalWeight = 0;
+for (let i = 0; i < zucchine.length; i++) {
+  totalWeight += zucchine[i].peso;
+}
+
+console.log(`il peso totale in grammmi e'${totalWeight}`);
