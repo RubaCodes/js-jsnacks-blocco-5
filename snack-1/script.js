@@ -1,5 +1,6 @@
 //array zucchine
-
+// Crea un array di 10 oggetti che rappresentano una zucchina, indicando per ognuna varietà, peso e lunghezza.
+// Calcola quanto pesano tutte le zucchine.
 const zucchine = [
   {
     tipo: 'a',
@@ -58,4 +59,6 @@ for (let i = 0; i < zucchine.length; i++) {
   totalWeight += zucchine[i].peso;
 }
 
-console.log(`il peso totale in grammmi e'${totalWeight}`);
+console.log(
+  `il peso totale  e'${totalWeight} g , ovvero ${totalWeight / 1000} kg`
+);
