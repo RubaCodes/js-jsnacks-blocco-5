@@ -57,3 +57,19 @@ const eco = cars.filter(
   (e) => e.alimetazione !== 'diesel' && e.alimetazione !== 'benzina'
 );
 console.log(benzina, diesel, eco);
+
+const gas = [];
+const petrol = [];
+const green = [];
+
+cars.forEach((e) => {
+  if (e.alimetazione === 'benzina') {
+    gas.push(e);
+  } else if (e.alimetazione === 'diesel') {
+    petrol.push(e);
+  } else {
+    green.push(e);
+  }
+});
+
+console.log(gas, petrol, green);
