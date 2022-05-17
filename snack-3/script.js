@@ -50,3 +50,10 @@ const cars = [
     alimetazione: 'metano',
   },
 ];
+
+const benzina = cars.filter((e) => e.alimetazione === 'benzina');
+const diesel = cars.filter((e) => e.alimetazione === 'diesel');
+const eco = cars.filter(
+  (e) => e.alimetazione !== 'diesel' && e.alimetazione !== 'benzina'
+);
+console.log(benzina, diesel, eco);
